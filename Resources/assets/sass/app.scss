@@ -1,0 +1,33 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    // align-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 1rem -5px #333333;
+    min-height: 2rem;
+    padding: 0.5rem;
+
+    .icon,
+    .content {
+        justify-content: center;
+        align-content: center;
+        align-items: stretch;
+    }
+
+    .icon {
+        border: 1px solid #3333;
+        margin-right: 1rem;
+        padding: 0.25rem 0.25rem 0;
+    }
+
+    .content {
+        text-align: right;
+        flex: 2;
+
+        .title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+    }
+}
