@@ -1,0 +1,13 @@
+.card-boxes{
+    display: flex;
+    max-width: 100%;
+    flex-flow: wrap;
+    .box{
+        min-height: 3rem;
+        box-shadow: 1px 1px 1rem 1px #3333;
+    }
+    .box:last-child{
+    }
+    .box:first-child{
+    }
+}
