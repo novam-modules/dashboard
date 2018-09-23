@@ -1,6 +1,12 @@
 <?php
 
-Route::group(['middleware' => 'web', 'prefix' => 'admin', 'namespace' => 'Admin\Dashboard\Http\Controllers'], function()
-{
-    Route::resource('dashboard', DashboardController::class);
-});
+foreach(['my', 'admin'] as $prefix){
+
+    Route::group([
+        'prefix'        => $prefix,
+        'middleware'    => ['web', 'Admin'],
+        'namespace'     => 'Admin\Dashboard\Http\Controllers'],
+        function(){
+            Route::resource('dashboard', DashboardController::class);
+        });
+}
