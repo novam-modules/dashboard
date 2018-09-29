@@ -6,6 +6,7 @@ foreach(['my', 'admin'] as $prefix){
         'prefix'        => $prefix,
         'middleware'    => ['web', 'Admin'],
         'namespace'     => 'Admin\Dashboard\Http\Controllers'],
+
         function(){
             Route::resource('dashboard', DashboardController::class);
         });

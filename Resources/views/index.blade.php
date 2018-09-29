@@ -28,7 +28,20 @@
             </div>
         </div>
 
-        @foreach (range(1, 8) as $item)
+        <div class="col-md-4 col-lg-3">
+                <div class="box">
+                    <a href="{{$emp='/admin/personell'}}" class="icon btn btn-outline-primary">
+                            <i class="material-icons md-48">supervisor_account</i>
+                        </a>
+                    <div class="content">
+                        <h4 class="title">Personell</h4>
+                        <hr>
+                        <a href="{{$emp.'/employees'}}" class="action">Employees</a>
+                    </div>
+                </div>
+            </div>
+
+        @foreach (range(1, 7) as $item)
         <div class="col-md-4 col-lg-3">
             <div class="box">
                 <a href="/admin/projects" class="icon btn btn-outline-primary">
