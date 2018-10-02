@@ -21,7 +21,7 @@
                                     <i class="material-icons md-48">view_list</i>
                                 </a>
                 <div class="content">
-                    <h4 class="title">Jobs</h4>
+                    <h4 class="title">Projects</h4>
                     <hr>
                     <a href="/" class="action">New Job</a>
                 </div>
@@ -40,9 +40,22 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="box">
+                    <a href="/admin/inventory" class="icon btn btn-outline-primary">
+                            <i class="material-icons md-48">view_list</i>
+                        </a>
+                    <div class="content">
+                        <h4 class="title">Inventory</h4>
+                        <hr>
+                        <a href="/" class="action">Fleet</a>
+                        <a href="/" class="action">Materials</a>
+                    </div>
+                </div>
+            </div>
 
-        @foreach (range(1, 7) as $item)
-        <div class="col-md-4 col-lg-3">
+        @foreach (range(1, 5) as $item)
+        {{--  <div class="col-md-4 col-lg-3">
             <div class="box">
                 <a href="/admin/projects" class="icon btn btn-outline-primary">
                         <i class="material-icons md-48">view_list</i>
@@ -53,8 +66,20 @@
                     <a href="/" class="action">New Job</a>
                 </div>
             </div>
-        </div>
+        </div>  --}}
         @endforeach
+        <div class="col-md-4 col-lg-3">
+            <div class="box">
+                <a href="/admin/business" class="icon btn btn-outline-primary">
+                        <i class="material-icons md-48">location_city</i>
+                    </a>
+                <div class="content">
+                    <h4 class="title">Business</h4>
+                    <hr>
+                    <a href="/" class="action">Add New</a>
+                </div>
+            </div>
+        </div>
         <div class="col-md-4 col-lg-3">
             <div class="box">
                 <a href="/admin/projects" class="icon btn btn-outline-primary">
@@ -76,6 +101,18 @@
                     <h4 class="title">Calendar</h4>
                     <hr>
                     <a href="/" class="action">Today</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="box">
+                <a href="/admin/projects" class="icon btn btn-outline-primary">
+                        <i class="material-icons md-48">settings</i>
+                    </a>
+                <div class="content">
+                    <h4 class="title">System</h4>
+                    <hr>
+                    <a href="/" class="action">settings</a>
                 </div>
             </div>
         </div>
