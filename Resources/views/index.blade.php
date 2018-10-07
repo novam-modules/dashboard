@@ -110,9 +110,11 @@
                         <i class="material-icons md-48">settings</i>
                     </a>
                 <div class="content">
-                    <h4 class="title">System</h4>
+                    <h4 class="title">Settings</h4>
                     <hr>
-                    <a href="/" class="action">settings</a>
+                    <a href="/" class="action">System</a>
+                    |
+                    <a href="/" class="action">Personal</a>
                 </div>
             </div>
         </div>
