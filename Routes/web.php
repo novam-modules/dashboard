@@ -1,8 +1,16 @@
 <?php
 
-foreach(user_routes() as $prefix){
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-    Route::prefix($prefix)->group(function() {
-        Route::resource('dashboard', DashboardController::class);
-    });
-}
+Route::prefix(user_route())->group(function() {
+    Route::resource('dashboard', DashboardController::class);
+});

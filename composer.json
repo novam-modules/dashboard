@@ -7,22 +7,19 @@
             "email": "hilmak01@gmail.com"
         }
     ],
-    "require": {
-        "composer/installers": "~1.0"
-    },
     "extra": {
         "laravel": {
             "providers": [
-                "Admin\\Dashboard\\Providers\\DashboardServiceProvider"
+                "Modules\\Dashboard\\Providers\\DashboardServiceProvider"
             ],
             "aliases": {
-
+                
             }
         }
     },
     "autoload": {
         "psr-4": {
-            "Admin\\Dashboard\\": ""
+            "Modules\\Dashboard\\": ""
         }
     }
 }
