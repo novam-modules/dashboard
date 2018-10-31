@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-foreach(user_routes() as $prefix){
 
-    Route::group(['prefix' => $prefix, 'middleware' => ['admin', 'web']], function() {
-        Route::resource('/dashboard', CalendarController::class);
-    });
-}
+Route::prefix(user_route())->group(function() {
+    Route::resource('dashboard', DashboardController::class);
+});
