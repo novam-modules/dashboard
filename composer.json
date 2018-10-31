@@ -13,7 +13,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Admin\\Dashboard\\Providers\\DashboardServiceProvider"
+                "Modules\\Dashboard\\Providers\\DashboardServiceProvider"
             ],
             "aliases": {
 
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Admin\\Dashboard\\": ""
+            "Modules\\Dashboard\\": ""
         }
     }
 }

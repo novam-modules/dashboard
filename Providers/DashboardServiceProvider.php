@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Dashboard\Providers;
+namespace Modules\Dashboard\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
@@ -91,7 +91,7 @@ class DashboardServiceProvider extends ServiceProvider
 
     /**
      * Register an additional directory of factories.
-     * 
+     *
      * @return void
      */
     public function registerFactories()
