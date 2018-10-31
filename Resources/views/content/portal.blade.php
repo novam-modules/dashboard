@@ -123,7 +123,59 @@
             </div>
             <div class="tab-pane" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">...</div>
             <div class="tab-pane" id="welcome" role="tabpanel" aria-labelledby="welcome-tab">
+                    <h4>Orientation</h4>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Employment Process</h4>
+                            <ol class="list-group">
+                                <li class="list-group-item">
+                                    Conditional Offer of Employment<br />
+                                    Status: Complete 03/10/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Background Check<br />
+                                    Status: Complete 03/10/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Confidentiality and Non Disclosure Agreement<br />
+                                    Status: Complete 03/10/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Driver License or ID<br />
+                                    Status: Complete 03/12/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Social Security Card<br />
+                                    Status: Complete 03/12/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Substance Abuse Program Ack<br />
+                                    Status: Complete 03/10/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Company Policy Manual Acknowledgement <br />
+                                    Status: Complete 03/10/{{ date('Y') }}
+                                </li>
+                                <li class="list-group-item">
+                                    Employment Eligibility Verification (I-9)<br />
+                                    Status: Complete 03/09/{{ date('Y') }}
+                                    </li>
+                                <li class="list-group-item">
+                                    Work Oportunity Tax Credit (WOTC)<br />
+                                    Status: Complete 03/10/{{ date('Y') }}
+                                </li>
 
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         {{-- <div class="card">
