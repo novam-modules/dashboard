@@ -2,31 +2,31 @@
     <div class="col-md-5">
         <div class="form-group mb-4">
             <label class="form-label">Company</label>
-            <input type="text" placeholder="Company" value="{{ $acct->name }}" class="form-control">
+            <input type="text" placeholder="Company" value="{{ $acct->name ?? old('company') }}" class="form-control">
         </div>
     </div>
     <div class="col-sm-6 col-md-3">
         <div class="form-group mb-4">
             <label class="form-label">Username</label>
-            <input type="text" placeholder="Username" value="nathan" class="form-control">
+            <input type="text" placeholder="Username" value="nathan" class="form-control" value="{{ $user->name ?? old('name') }}">
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="form-group mb-4">
             <label class="form-label">Email address</label>
-            <input type="email" placeholder="Email" class="form-control" value="{{ $user->name }}">
+            <input type="email" placeholder="Email" class="form-control" value="{{ $user->email ?? old('email') }}">
         </div>
     </div>
     <div class="col-sm-6 col-md-6">
         <div class="form-group mb-4">
             <label class="form-label">First Name</label>
-            <input type="text" placeholder="First name" class="form-control">
+            <input type="text" placeholder="First name" class="form-control" value="{{ $user->profile->first_name ?? old('first_name') }}">
         </div>
     </div>
     <div class="col-sm-6 col-md-6">
         <div class="form-group mb-4">
             <label class="form-label">Last Name</label>
-            <input type="text" placeholder="Last Name" class="form-control">
+            <input type="text" placeholder="Last Name" class="form-control" value="{{ $user->profile->first_name ?? old('last_name') }}">
         </div>
     </div>
     <div class="col-md-12">

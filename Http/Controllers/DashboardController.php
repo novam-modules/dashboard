@@ -14,9 +14,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $user = request()->user();
-        $acct = $user->account;
-        dump(get_defined_vars());
+        $user    = request()->user();
+        $acct    = $user->account;
+        $group   = $user->group;
+        $profile = $user->profile;
         return view('dashboard::index', get_defined_vars());
     }
 
