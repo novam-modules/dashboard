@@ -3,7 +3,9 @@
     <div class="container-fluid">
         <h2 class="no-margin-bottom">
             Profile
-            <a href="/admin/dashboard" class="float-right btn btn-sm btn-default">go to dashboard</a>
+            @can('view-dashboard')
+                <a href="/admin/dashboard" class="float-right btn btn-sm btn-default">go to dashboard</a>
+            @endcan
         </h2>
     </div>
 </header>
@@ -24,12 +26,12 @@
                     aria-selected="true">Work Space</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                    aria-selected="true">My Payroll</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
                     aria-selected="false">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                    aria-selected="true">My Payroll</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="benefits-tab" data-toggle="tab" href="#benefits" role="tab" aria-controls="benefits"
@@ -47,7 +49,7 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <a class="btn btn-block btn-default d-md-none" onlick="$('#space').tab('show')">Work Space</a>
+            <a class="btn btn-block btn-default d-md-none" onlick="$('#myTab [href="#space"]').tab('show')">Work Space</a>
             <div class="tab-pane bg-white active" id="space" role="tabpanel" aria-labelledby="space-tab">
                 <div class="card">
                     <div class="card-header">
@@ -58,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-block btn-default d-md-none" onlick="$('#home').tab('show')">My Payroll</a>
+            <a class="btn btn-block btn-default d-md-none" onlick="$('#myTab [href="#home"]').tab('show')">My Payroll</a>
             <div class="tab-pane bg-white" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             </div>

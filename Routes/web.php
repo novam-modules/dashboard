@@ -11,6 +11,18 @@
 |
 */
 
-Route::prefix(user_route())->group(function() {
+Route::group([
+    'prefix' => user_route('admin'), 'middleware' => ['web', 'admin']
+], function() {
     Route::resource('dashboard', DashboardController::class);
 });
+
+foreach(user_routes() as $prefix){
+
+    Route::group([
+    'prefix' => $prefix, 'middleware' => ['web', 'admin']
+    ], function() {
+        Route::resource('dashboard', DashboardController::class);
+    });
+
+}

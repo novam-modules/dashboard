@@ -44,7 +44,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="item d-flex align-items-center">
                     <div class="icon bg-orange"><i class="icon-check"></i></div>
-                    <div class="title"><span>Open<br>Cases</span>
+                    <div class="title"><span>Open<br>Jobs</span>
                         <div class="progress">
                             <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0"
                                 aria-valuemax="100" class="progress-bar bg-orange"></div>
