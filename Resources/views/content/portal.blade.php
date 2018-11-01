@@ -1,7 +1,10 @@
 <!-- Page Header-->
 <header class="page-header">
     <div class="container-fluid">
-        <h2 class="no-margin-bottom">Profile</h2>
+        <h2 class="no-margin-bottom">
+            Profile
+            <a href="/admin/dashboard" class="float-right btn btn-sm btn-default">go to dashboard</a>
+        </h2>
     </div>
 </header>
 <!-- Breadcrumb-->
@@ -15,14 +18,14 @@
 <div class="row">
     <div class="col-lg-8">
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs d-none d-md-flex" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                    aria-selected="true">Time Sheet</a>
+                <a class="nav-link active" id="space-tab" data-toggle="tab" href="#space" role="tab" aria-controls="space"
+                    aria-selected="true">Work Space</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="space-tab" data-toggle="tab" href="#space" role="tab" aria-controls="space"
-                    aria-selected="true">Work Space</a>
+                <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                    aria-selected="true">My Payroll</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
@@ -30,149 +33,73 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="benefits-tab" data-toggle="tab" href="#benefits" role="tab" aria-controls="benefits"
-                    aria-selected="false">Benefits</a>
+                    aria-selected="false">My Benefits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="docs-tab" data-toggle="tab" href="#docs" role="tab" aria-controls="docs"
+                    aria-selected="false">Documents</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="welcome-tab" data-toggle="tab" href="#welcome" role="tab" aria-controls="welcome"
-                    aria-selected="false">Welcome</a>
+                    aria-selected="false">Employment</a>
             </li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <a class="btn btn-block btn-default d-md-none" onlick="$('#space').tab('show')">Work Space</a>
+            <div class="tab-pane bg-white active" id="space" role="tabpanel" aria-labelledby="space-tab">
+                <div class="card">
+                    <div class="card-header">
 
-            </div>
-            <div class="tab-pane" id="space" role="tabpanel" aria-labelledby="space-tab">
-
-            </div>
-            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <form class="card">
+                    </div>
                     <div class="card-body">
+                        @include('dashboard::content.workspace')
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-block btn-default d-md-none" onlick="$('#home').tab('show')">My Payroll</a>
+            <div class="tab-pane bg-white" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+            </div>
+            <div class="tab-pane bg-white" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <form class="card">
+                    <div class="card-header">
                         <h3 class="card-title">Edit Profile</h3>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">Company</label>
-                                    <input type="text" placeholder="Company" value="Nathan &amp; Nathan" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">Username</label>
-                                    <input type="text" placeholder="Username" value="nathan" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">Email address</label>
-                                    <input type="email" placeholder="Email" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">First Name</label>
-                                    <input type="text" placeholder="First name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">Last Name</label>
-                                    <input type="text" placeholder="Last Name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">Address</label>
-                                    <input type="text" placeholder="Home Address" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">City</label>
-                                    <input type="text" placeholder="City" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-3">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">ZIP</label>
-                                    <input type="number" placeholder="ZIP" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="form-group mb-4">
-                                    <label class="form-label">Country</label>
-                                    <select class="form-control custom-select">
-                                        <option value="">UK</option>
-                                        <option value="">US</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group mb-0">
-                                    <label class="form-label">About Me</label>
-                                    <textarea rows="5" placeholder="Here can be your description" value="Mike" class="form-control">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &quot;What's happened to me?&quot; he thought. It wasn't a dream.</textarea>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="card-body">
+                        @include('dashboard::content.profile')
                     </div>
                     <div class="card-footer text-right">
                         <button type="submit" class="btn btn-primary">Update Profile</button>
                     </div>
                 </form>
             </div>
-            <div class="tab-pane" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">...</div>
-            <div class="tab-pane" id="welcome" role="tabpanel" aria-labelledby="welcome-tab">
-                    <h4>Orientation</h4>
-                <div class="card-deck">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Employment Process</h4>
-                            <ol class="list-group">
-                                <li class="list-group-item">
-                                    Conditional Offer of Employment<br />
-                                    Status: Complete 03/10/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Background Check<br />
-                                    Status: Complete 03/10/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Confidentiality and Non Disclosure Agreement<br />
-                                    Status: Complete 03/10/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Driver License or ID<br />
-                                    Status: Complete 03/12/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Social Security Card<br />
-                                    Status: Complete 03/12/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Substance Abuse Program Ack<br />
-                                    Status: Complete 03/10/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Company Policy Manual Acknowledgement <br />
-                                    Status: Complete 03/10/{{ date('Y') }}
-                                </li>
-                                <li class="list-group-item">
-                                    Employment Eligibility Verification (I-9)<br />
-                                    Status: Complete 03/09/{{ date('Y') }}
-                                    </li>
-                                <li class="list-group-item">
-                                    Work Oportunity Tax Credit (WOTC)<br />
-                                    Status: Complete 03/10/{{ date('Y') }}
-                                </li>
+            <div class="tab-pane bg-white" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">
 
-                            </ol>
+            </div>
+            <div class="tab-pane bg-white" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+
+            </div>
+            <div class="tab-pane bg-white" id="welcome" role="tabpanel" aria-labelledby="welcome-tab">
+
+                <br/>
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="//placehold.it/1600X900" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Welcome to {{config('app.name')}}</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, eum dolorem? Eveniet deleniti nostrum reiciendis saepe voluptas omnis consectetur est, perspiciatis fugiat ex quo impedit inventore tempora sint consequuntur placeat.
+                            </p>
                         </div>
                     </div>
                     <div class="card">
+                        <div class="card-header">
+
+                        </div>
                         <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                            <p class="card-text">Text</p>
+                            @include('dashboard::content.employee')
                         </div>
                     </div>
                 </div>
